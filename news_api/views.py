@@ -1,8 +1,6 @@
 from django.shortcuts import render
 import requests
 
-# move to env
-API_KEY = '141063e5e50941c9a61678a0beacfc78'
 
 
 def Home(request):

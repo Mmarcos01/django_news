@@ -11,6 +11,12 @@
     <h1>News App</h1>    
 
     {% for article in articles %}
+    <img src="{{ article.urlToImage}}" alt="article image" height="200px" width="=200px">
+    <p>{{ article.author }}</p>
+    <p>{{ article.title }}</p>
+    <p>{{ article.desctiption }}</p>
+    <a href="{{ article.url }}" target="_blank">Go to Article</a>
+    <h5>published at: {{article.publishedAt }}</h5>
 
     {% endfor %}
 </body>
