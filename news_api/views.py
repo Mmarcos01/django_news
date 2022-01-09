@@ -1,12 +1,18 @@
 from django.shortcuts import render
 import requests
 
-
+# move to env
+API_KEY = '141063e5e50941c9a61678a0beacfc78'
 
 
 def Home(request):
-    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
+    url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
     response = requests.get(url)
-    # convert to json
     data = response.json() 
-    print(data)
+    articles = data['articles']
+    
+    context = {
+        'articles' : articles
+    }
+
+    return render(request, 'home.html', context)
