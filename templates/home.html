@@ -11,17 +11,34 @@
 <body>
     <h1>News App</h1>    
 
-    <h2>Search by Country</h2>
+    <!-- make dropdown selections -->
+    <h3>Search by Country</h3>
     <form action="" method="get">
         <input type="text" name="country">
         <button type="submit" value="Search">Search</button>
     </form>
 
-    <h2>Search by Category</h2>
+
     <form action="" method="get">
-        <input type="text" name="country">
-        <button type="submit" value="Search">Search</button>
+        <label for="category">Change Category:</label>
+            <select name="category" id="category">
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="general">General</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+            </select>
+        <br><br>
+        <input type="submit" value="Search">
     </form>
+
+    <!-- <h3>Search by Category</h3>
+    <form action="" method="get">
+        <input type="text" name="category">
+        <button type="submit" value="Search">Search</button>
+    </form> -->
 
     {% for article in articles %}
     <img src="{{ article.urlToImage}}" alt="article image" height="200px" width="=200px">
