@@ -1,9 +1,6 @@
 from django.shortcuts import render
 import requests
-
-# move to env
-API_KEY = '141063e5e50941c9a61678a0beacfc78'
-
+from news_project.settings import API_KEY
 
 def Home(request):
     country = request.GET.get('country')

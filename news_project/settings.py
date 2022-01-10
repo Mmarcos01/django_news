@@ -29,7 +29,7 @@ environ.Env.read_env()
 SECRET_KEY = env.str('SECRET')
 DEBUG = env.bool('DEBUG')
 ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS'))
-
+API_KEY = env.str('API_KEY')
 # Application definition
 
 INSTALLED_APPS = [
