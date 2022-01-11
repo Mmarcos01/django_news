@@ -1,7 +1,6 @@
 from django.shortcuts import render
 import requests
-
-
+from news_project.settings import API_KEY
 
 def Home(request):
     country = request.GET.get('country')
